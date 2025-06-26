@@ -27,7 +27,7 @@ export default function Inference() {
     },
     { 
       id: 4, 
-      title: "Calculando previsões julho/2025 - junho/2026", 
+      title: "Calculando previsões julho/2025 - Setembro/2025", 
       subtitle: "Gerando insights preditivos...",
       duration: 1100 
     },
