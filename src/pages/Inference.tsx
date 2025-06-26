@@ -77,8 +77,12 @@ export default function Inference() {
         {/* Logo IBM */}
         <div className="ibm-logo-container">
           <div className="ibm-logo">
-            <span>IBM</span>
-          </div>
+            <img 
+              src="/logo_ibm.png" 
+              alt="IBM" 
+              className="ibm-logo-image"
+            />
+        </div>
         </div>
 
         {/* Título Principal */}

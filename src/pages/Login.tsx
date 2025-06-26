@@ -32,7 +32,11 @@ export default function Login() {
     <div className="login-container">
       <div className="login-card">
         <div className="logo-container">
-          <div className="logo">S</div>
+          <img 
+            src="/logo_sohipren.png" 
+            alt="Sohipren" 
+            className="logo-image"
+          />
           <h1 className="title">Dados do Futuro</h1>
           <p className="subtitle">Sistema Preditivo Comercial</p>
         </div>

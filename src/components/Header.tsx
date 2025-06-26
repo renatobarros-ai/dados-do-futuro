@@ -25,10 +25,13 @@ export default function Header() {
             onClick={() => navigate('/insights')}
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 bg-corporate-blue rounded-lg flex items-center justify-center 
-                          group-hover:scale-105 transition-transform duration-200">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
+            <div className="header-logo-container">
+              <img 
+                src="/logo_sohipren.png" 
+                alt="Sohipren" 
+                className="header-logo-image"
+              />
+            </div> 
             <div>
               <h1 className="text-xl font-bold text-slate-900 dark:text-white">
                 Dados do Futuro

@@ -682,3 +682,37 @@ body.dark .step-subtitle {
 body.dark .completion-message p {
   color: #34d399;
 }
+
+/* Logo Images */
+.logo-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto 1rem;
+}
+
+.ibm-logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Para logo branca */
+}
+
+.header-logo-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.header-logo-container:hover {
+  transform: scale(1.05);
+}
+
+.header-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
