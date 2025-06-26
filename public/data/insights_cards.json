@@ -1,0 +1,123 @@
+{
+  "tendencia_nacional": {
+    "titulo": "Tendências Identificadas",
+    "confianca": "Alta Confiança",
+    "items": [
+      {
+        "titulo": "Variação Nacional August 2025",
+        "descricao": "Crescimento de +157.4% vs Julho (1,503 vendas)",
+        "contexto": "Baseado em dados de todos os estados"
+      },
+      {
+        "titulo": "Variação Nacional September 2025",
+        "descricao": "Crescimento de +101.4% vs Julho (1,176 vendas)",
+        "contexto": "Baseado em dados de todos os estados"
+      }
+    ]
+  },
+  "volatilidade_estados": {
+    "titulo": "Padrões Analíticos",
+    "confianca": "Alto (3 meses)",
+    "items": [
+      {
+        "titulo": "Volatilidade em EX",
+        "descricao": "73.9% de oscilação no período",
+        "contexto": "Jul→Set: +386.2% (de 94 para 457)"
+      },
+      {
+        "titulo": "Volatilidade em GO",
+        "descricao": "69.8% de oscilação no período",
+        "contexto": "Jul→Set: +186.6% (de 67 para 192)"
+      },
+      {
+        "titulo": "Volatilidade em MG",
+        "descricao": "60.3% de oscilação no período",
+        "contexto": "Jul→Set: +51.6% (de 31 para 47)"
+      }
+    ]
+  },
+  "produtos_alta": {
+    "titulo": "Variações Regionais",
+    "confianca": "Médio",
+    "items": [
+      {
+        "titulo": "5.0506.L006630.0 (SP)",
+        "descricao": "Crescimento de +1900.0% no período",
+        "contexto": "Jul: 1 → Set: 20 vendas"
+      },
+      {
+        "titulo": "5.1301.0565002.0 (GO)",
+        "descricao": "Crescimento de +1000.0% no período",
+        "contexto": "Jul: 4 → Set: 44 vendas"
+      },
+      {
+        "titulo": "5.5209.0548800.0 (GO)",
+        "descricao": "Crescimento de +900.0% no período",
+        "contexto": "Jul: 1 → Set: 10 vendas"
+      }
+    ]
+  },
+  "produtos_baixa": {
+    "titulo": "Pontos de Atenção",
+    "confianca": "Monitoramento",
+    "items": [
+      {
+        "titulo": "5.0201.0540607.0 (MG)",
+        "descricao": "Declínio de -100.0% no período",
+        "contexto": "Jul: 2 → Set: 0 vendas"
+      },
+      {
+        "titulo": "5.0201.0540607.0 (PR)",
+        "descricao": "Declínio de -100.0% no período",
+        "contexto": "Jul: 6 → Set: 0 vendas"
+      },
+      {
+        "titulo": "5.0201.0540607.0 (SP)",
+        "descricao": "Declínio de -100.0% no período",
+        "contexto": "Jul: 9 → Set: 0 vendas"
+      }
+    ]
+  },
+  "produtos_base": {
+    "titulo": "Análise Temporal",
+    "confianca": "Padrão Consistente",
+    "items": [
+      {
+        "titulo": "5.0204.0541612.0 (EX) - Alto Volume",
+        "descricao": "15 vendas no trimestre",
+        "contexto": "Crescimento estável: -100.0%"
+      },
+      {
+        "titulo": "5.0205.0542403.0 (EX) - Alto Volume",
+        "descricao": "30 vendas no trimestre",
+        "contexto": "Crescimento estável: -100.0%"
+      },
+      {
+        "titulo": "5.0208.0544831.0 (SP) - Alto Volume",
+        "descricao": "21 vendas no trimestre",
+        "contexto": "Crescimento estável: -100.0%"
+      }
+    ]
+  },
+  "produtos_observacao": {
+    "titulo": "Cenários Projetados",
+    "confianca": "Simulação",
+    "items": [
+      {
+        "titulo": "5.0201.0540607.0 (MG) - Baixo Volume",
+        "descricao": "2 vendas no trimestre",
+        "contexto": "Tendência: -100.0%"
+      },
+      {
+        "titulo": "5.0203.0540801.0 (GO) - Baixo Volume",
+        "descricao": "2 vendas no trimestre",
+        "contexto": "Tendência: -100.0%"
+      },
+      {
+        "titulo": "5.0208.0544807.0 (EX) - Baixo Volume",
+        "descricao": "3 vendas no trimestre",
+        "contexto": "Tendência: -100.0%"
+      }
+    ]
+  }
+}

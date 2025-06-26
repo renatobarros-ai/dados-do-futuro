@@ -1,7 +1,109 @@
+import { useState, useEffect } from 'react'
 import Header from '../components/Header'
-import { TrendingUp, TrendingDown, AlertTriangle, Target, Globe, Clock, BarChart3, PieChart } from 'lucide-react'
+import { 
+  TrendingUp, 
+  TrendingDown, 
+  Zap, 
+  BarChart3, 
+  Eye, 
+  Activity,
+  Medal,
+  AlertTriangle
+} from 'lucide-react'
+
+interface InsightItem {
+  titulo: string
+  descricao: string
+  contexto: string
+}
+
+interface InsightCard {
+  titulo: string
+  confianca: string
+  items: InsightItem[]
+}
+
+interface InsightsData {
+  tendencia_nacional: InsightCard
+  volatilidade_estados: InsightCard
+  produtos_alta: InsightCard
+  produtos_baixa: InsightCard
+  produtos_base: InsightCard
+  produtos_observacao: InsightCard
+}
 
 export default function Insights() {
+  const [insightsData, setInsightsData] = useState<InsightsData | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string>('')
+
+  useEffect(() => {
+    const loadInsights = async () => {
+      try {
+        setIsLoading(true)
+        const response = await fetch('/data/insights_cards.json')
+        if (!response.ok) {
+          throw new Error('Erro ao carregar insights')
+        }
+        const data = await response.json()
+        setInsightsData(data)
+      } catch (err) {
+        console.error('Erro ao carregar insights:', err)
+        setError('Erro ao carregar dados de insights')
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadInsights()
+  }, [])
+
+  // Função para extrair info do produto
+  const parseProductInfo = (titulo: string, descricao: string) => {
+    const match = titulo.match(/^(.+?)\s*\((\w+)\)/)
+    if (match) {
+      return {
+        codigo: match[1],
+        uf: match[2],
+        nome: descricao.includes('vendas') ? 'Volume' : descricao.split(' ')[0]
+      }
+    }
+    return { codigo: titulo, uf: '', nome: '' }
+  }
+
+  // Função para extrair percentual
+  const parsePercentage = (descricao: string) => {
+    const match = descricao.match(/([+-]?\d+\.?\d*)%/)
+    return match ? match[1] : '0'
+  }
+
+  if (isLoading) {
+    return (
+      <>
+        <Header />
+        <div className="page-content">
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p>Processando insights com IBM Granite...</p>
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  if (error || !insightsData) {
+    return (
+      <>
+        <Header />
+        <div className="page-content">
+          <div className="error-container">
+            <p>❌ {error || 'Erro ao carregar insights'}</p>
+          </div>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <Header />
@@ -9,204 +111,180 @@ export default function Insights() {
         <div className="insights-header">
           <h1 className="page-title">Insights Comerciais</h1>
           <p className="insights-subtitle">
-            Análises preditivas baseadas em séries temporais dos próximos 3 meses - Período: Jul/2025 a Set/2025
+            Análises baseadas em dados reais processados pelo IBM Granite - Jul/Ago/Set 2025
           </p>
         </div>
 
-        {/* Métricas Principais */}
-        <div className="metrics-grid">
-          <div className="metric-card metric-primary">
-            <div className="metric-icon">
-              <BarChart3 size={24} />
-            </div>
-            <div className="metric-content">
-              <h3 className="metric-title">1.563</h3>
-              <p className="metric-label">Previsões Geradas</p>
-            </div>
-          </div>
-
-          <div className="metric-card metric-success">
-            <div className="metric-icon">
-              <TrendingUp size={24} />
-            </div>
-            <div className="metric-content">
-              <h3 className="metric-title">R$ 7.241</h3>
-              <p className="metric-label">Ticket Médio</p>
-            </div>
-          </div>
-
-          <div className="metric-card metric-info">
-            <div className="metric-icon">
-              <Globe size={24} />
-            </div>
-            <div className="metric-content">
-              <h3 className="metric-title">6</h3>
-              <p className="metric-label">Estados Analisados</p>
-            </div>
-          </div>
-
-          <div className="metric-card metric-warning">
-            <div className="metric-icon">
-              <PieChart size={24} />
-            </div>
-            <div className="metric-content">
-              <h3 className="metric-title">15%</h3>
-              <p className="metric-label">Participação EX</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Cards de Insights */}
-        <div className="insights-grid">
+        {/* Cards de Insights Redesenhados */}
+        <div className="insights-grid-new">
           
-          {/* Tendências Identificadas */}
-          <div className="insight-card trend-card">
-            <div className="card-header">
-              <div className="card-icon trend-icon">
-                <TrendingUp size={20} />
+          {/* 1. Crescimento Nacional */}
+          <div className="insight-card-new growth-card">
+            <div className="card-header-new">
+              <div className="card-icon-new growth-icon">
+                <Activity size={24} />
               </div>
-              <div>
-                <h3 className="card-title">Tendências Identificadas</h3>
-                <span className="confidence-badge high">Alta Confiança</span>
-              </div>
+              <h3 className="card-title-new">Crescimento Nacional</h3>
             </div>
-            <div className="card-content">
-              <div className="trend-item">
-                <h4>BOMBA CNH A-008 (EX)</h4>
-                <p>Pico previsto para agosto (68 unidades), seguido de declínio</p>
-                <span className="trend-context">Baseado em padrão sazonal identificado</span>
+            <div className="card-content-new">
+              <div className="variation-month">
+                <div className="month-label">Julho → Agosto</div>
+                <div className="variation-value positive">+157.4%</div>
+                <div className="variation-detail">584 → 1.503 vendas</div>
               </div>
-              <div className="trend-item">
-                <h4>MUD BO 8 (SP/MG)</h4>
-                <p>Performance forte em SP/MG, ausente em GO/PR/RS</p>
-                <span className="trend-context">Potencial de expansão geográfica identificado</span>
+              <div className="variation-month">
+                <div className="month-label">Agosto → Setembro</div>
+                <div className="variation-value negative">-21.8%</div>
+                <div className="variation-detail">1.503 → 1.176 vendas</div>
               </div>
             </div>
           </div>
 
-          {/* Padrões Analíticos */}
-          <div className="insight-card pattern-card">
-            <div className="card-header">
-              <div className="card-icon pattern-icon">
-                <Target size={20} />
+          {/* 2. Estados Mais Voláteis */}
+          <div className="insight-card-new volatility-card">
+            <div className="card-header-new">
+              <div className="card-icon-new volatility-icon">
+                <Zap size={24} />
               </div>
-              <div>
-                <h3 className="card-title">Padrões Analíticos</h3>
-                <span className="confidence-badge high">Alto (3+ meses)</span>
-              </div>
+              <h3 className="card-title-new">Estados Mais Voláteis</h3>
             </div>
-            <div className="card-content">
-              <div className="pattern-item">
-                <h4>Especialização Regional</h4>
-                <p>GO apresenta concentração em Bombas CNH (3x média nacional)</p>
-                <span className="pattern-implication">Estratégia regional pode ser replicável</span>
-              </div>
-              <div className="pattern-item">
-                <h4>Mercado Internacional Subestimado</h4>
-                <p>EX representa 15% volume, mas maior ticket médio</p>
-                <span className="pattern-implication">Potencial de ampliação de portfólio para exportação</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Variações Regionais */}
-          <div className="insight-card regional-card">
-            <div className="card-header">
-              <div className="card-icon regional-icon">
-                <Globe size={20} />
-              </div>
-              <div>
-                <h3 className="card-title">Variações Regionais</h3>
-                <span className="confidence-badge medium">Médio</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="regional-item">
-                <div className="region-row">
-                  <span className="region-name">Goiás (GO)</span>
-                  <span className="region-specialty">Especialista em Bombas CNH</span>
-                </div>
-                <div className="region-row">
-                  <span className="region-name">São Paulo (SP)</span>
-                  <span className="region-specialty">Portfólio Diversificado</span>
-                </div>
-                <div className="region-row">
-                  <span className="region-name">Exportação (EX)</span>
-                  <span className="region-specialty">Alto Valor Agregado</span>
-                </div>
-              </div>
+            <div className="card-content-new">
+              {insightsData.volatilidade_estados.items.map((item, index) => {
+                const volatilidade = item.descricao.match(/(\d+\.?\d*)%/)?.[1] || '0'
+                const variacao = item.contexto.match(/([+-]\d+\.?\d*)%/)?.[1] || '0'
+                const uf = item.titulo.split(' ')[2]
+                
+                return (
+                  <div key={index} className="ranking-item">
+                    <div className="ranking-position">{index + 1}º</div>
+                    <div className="ranking-content">
+                      <div className="ranking-title">{uf}</div>
+                      <div className="ranking-metric">{volatilidade}% volatilidade</div>
+                      <div className="ranking-detail">Jul→Set: {variacao}%</div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
-          {/* Pontos de Atenção */}
-          <div className="insight-card attention-card">
-            <div className="card-header">
-              <div className="card-icon attention-icon">
-                <AlertTriangle size={20} />
+          {/* 3. Maiores Crescimentos */}
+          <div className="insight-card-new growth-products-card">
+            <div className="card-header-new">
+              <div className="card-icon-new growth-products-icon">
+                <TrendingUp size={24} />
               </div>
-              <div>
-                <h3 className="card-title">Pontos de Atenção</h3>
-                <span className="confidence-badge medium">Monitoramento</span>
-              </div>
+              <h3 className="card-title-new">Maiores Crescimentos</h3>
             </div>
-            <div className="card-content">
-              <div className="attention-item risk">
-                <h4>Declínio Projetado</h4>
-                <p>Produto com redução de 40% prevista pós-agosto</p>
-                <span className="attention-action">Monitoramento próximo sugerido</span>
-              </div>
-              <div className="attention-item warning">
-                <h4>Concentração de Risco</h4>
-                <p>85% das vendas concentradas em 3 estados</p>
-                <span className="attention-action">Considerar diversificação geográfica</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Análise Temporal */}
-          <div className="insight-card temporal-card">
-            <div className="card-header">
-              <div className="card-icon temporal-icon">
-                <Clock size={20} />
-              </div>
-              <div>
-                <h3 className="card-title">Análise Temporal</h3>
-                <span className="confidence-badge high">Padrão Consistente</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="temporal-item">
-                <h4>Tendência Trimestral</h4>
-                <p>Bombas CNH: crescimento esperado | Motores MLS: estabilidade</p>
-              </div>
-              <div className="temporal-item">
-                <h4>Variação Mensal</h4>
-                <p>Flutuação de até 45% entre meses no período analisado</p>
-              </div>
+            <div className="card-content-new">
+              {insightsData.produtos_alta.items.map((item, index) => {
+                const produto = parseProductInfo(item.titulo, item.descricao)
+                const crescimento = parsePercentage(item.descricao)
+                const vendas = item.contexto.match(/(\d+) → (\d+)/)
+                
+                return (
+                  <div key={index} className="ranking-item">
+                    <div className="ranking-position">{index + 1}º</div>
+                    <div className="ranking-content">
+                      <div className="ranking-title">{produto.codigo}</div>
+                      <div className="ranking-location">{produto.uf}</div>
+                      <div className="ranking-metric positive">+{crescimento}%</div>
+                      <div className="ranking-detail">
+                        {vendas ? `${vendas[1]} → ${vendas[2]} vendas` : item.contexto}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
-          {/* Simulador de Cenários */}
-          <div className="insight-card scenario-card">
-            <div className="card-header">
-              <div className="card-icon scenario-icon">
-                <TrendingUp size={20} />
+          {/* 4. Maiores Declínios */}
+          <div className="insight-card-new decline-card">
+            <div className="card-header-new">
+              <div className="card-icon-new decline-icon">
+                <TrendingDown size={24} />
               </div>
-              <div>
-                <h3 className="card-title">Cenários Projetados</h3>
-                <span className="confidence-badge medium">Simulação</span>
-              </div>
+              <h3 className="card-title-new">Maiores Declínios</h3>
             </div>
-            <div className="card-content">
-              <div className="scenario-item">
-                <h4>Replicação de Performance Regional</h4>
-                <p>Aplicar estratégia GO (Bombas CNH) em SP</p>
-                <div className="scenario-metrics">
-                  <span className="metric">~156 unidades adicionais</span>
-                  <span className="metric">R$ 245.000 potencial</span>
-                  <span className="probability moderate">Probabilidade: Moderada a Alta</span>
-                </div>
+            <div className="card-content-new">
+              {insightsData.produtos_baixa.items.map((item, index) => {
+                const produto = parseProductInfo(item.titulo, item.descricao)
+                const declinio = Math.abs(parseFloat(parsePercentage(item.descricao)))
+                const vendas = item.contexto.match(/(\d+) → (\d+)/)
+                
+                return (
+                  <div key={index} className="ranking-item">
+                    <div className="ranking-position">{index + 1}º</div>
+                    <div className="ranking-content">
+                      <div className="ranking-title">{produto.codigo}</div>
+                      <div className="ranking-location">{produto.uf}</div>
+                      <div className="ranking-metric negative">-{declinio}%</div>
+                      <div className="ranking-detail">
+                        {vendas ? `${vendas[1]} → ${vendas[2]} vendas` : item.contexto}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* 5. Alto Volume / Baixo Crescimento */}
+          <div className="insight-card-new base-card">
+            <div className="card-header-new">
+              <div className="card-icon-new base-icon">
+                <BarChart3 size={24} />
               </div>
+              <h3 className="card-title-new">Alto Volume / Baixo Crescimento</h3>
+            </div>
+            <div className="card-content-new">
+              {insightsData.produtos_base.items.map((item, index) => {
+                const produto = parseProductInfo(item.titulo, item.descricao)
+                const volume = item.descricao.match(/(\d+) vendas/)?.[1] || '0'
+                const crescimento = item.contexto.match(/([+-]?\d+\.?\d*)%/)?.[1] || '0'
+                
+                return (
+                  <div key={index} className="ranking-item">
+                    <div className="ranking-position">{index + 1}º</div>
+                    <div className="ranking-content">
+                      <div className="ranking-title">{produto.codigo}</div>
+                      <div className="ranking-location">{produto.uf}</div>
+                      <div className="ranking-metric volume">{volume} vendas</div>
+                      <div className="ranking-detail">Crescimento: {crescimento}%</div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* 6. Baixo Volume / Baixo Crescimento */}
+          <div className="insight-card-new observation-card">
+            <div className="card-header-new">
+              <div className="card-icon-new observation-icon">
+                <Eye size={24} />
+              </div>
+              <h3 className="card-title-new">Baixo Volume / Baixo Crescimento</h3>
+            </div>
+            <div className="card-content-new">
+              {insightsData.produtos_observacao.items.map((item, index) => {
+                const produto = parseProductInfo(item.titulo, item.descricao)
+                const volume = item.descricao.match(/(\d+) vendas/)?.[1] || '0'
+                const tendencia = item.contexto.match(/([+-]?\d+\.?\d*)%/)?.[1] || '0'
+                
+                return (
+                  <div key={index} className="ranking-item">
+                    <div className="ranking-position">{index + 1}º</div>
+                    <div className="ranking-content">
+                      <div className="ranking-title">{produto.codigo}</div>
+                      <div className="ranking-location">{produto.uf}</div>
+                      <div className="ranking-metric volume-low">{volume} vendas</div>
+                      <div className="ranking-detail">Tendência: {tendencia}%</div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
