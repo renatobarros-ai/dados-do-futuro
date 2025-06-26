@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Inference() {
@@ -6,7 +6,7 @@ export default function Inference() {
   const [progress, setProgress] = useState(0)
   const navigate = useNavigate()
 
-  const steps = [
+  const steps = useMemo(() => [
     { 
       id: 1, 
       title: "Carregando modelo IBM Granite Time Series TTM R2", 
@@ -37,7 +37,7 @@ export default function Inference() {
       subtitle: "Processamento concluído com sucesso!",
       duration: 800 
     }
-  ]
+  ], [])
 
   useEffect(() => {
     if (currentStep < steps.length) {
@@ -54,7 +54,7 @@ export default function Inference() {
 
       return () => clearTimeout(redirectTimer)
     }
-  }, [currentStep, navigate])
+  }, [currentStep, navigate, steps])
 
   useEffect(() => {
     // Atualizar progresso suavemente

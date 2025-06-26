@@ -1,0 +1,498 @@
+[
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948655339-7ea804d9bf5b8.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b2f000538f23db32927",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "project_id": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:35.342258Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "instanceId": "0069c7a988125f7f7cf9883f618a909067adf2124cbaacd8b8aad624a9e6b7d4c2a8d4de8d22d8d7851bc18691caab02c891fdc4f3f6f4ff45d8085bb779dbe31f487883786ac788fef2ec54d3ee"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:35.681383192Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b300005c809132a539e",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "service_name": "dados-do-futuro",
+        "project_id": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:36.378889Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-trigger-region": "global",
+      "instanceId": "0069c7a988125f7f7cf9883f618a909067adf2124cbaacd8b8aad624a9e6b7d4c2a8d4de8d22d8d7851bc18691caab02c891fdc4f3f6f4ff45d8085bb779dbe31f487883786ac788fef2ec54d3ee",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:36.632035485Z"
+  },
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948658835-694e7dd3e2d66.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b32000cd186a8635d56",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-east4",
+        "service_name": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "configuration_name": "dados-do-futuro",
+        "project_id": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:38.840070Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "instanceId": "0069c7a9885cf944b14bb3f4732f23469fe4179a950299899eeb2e72dd8101bcbfe83a1ceee731c5de2291de5357d22759b7c38c2fea549dbf6b25eec1abe793013539c98d3b412a173d249674cd"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:39.007734398Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b33000591c480132bb9",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "configuration_name": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "service_name": "dados-do-futuro",
+        "project_id": "dados-do-futuro",
+        "location": "us-east4"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:39.364996Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-region": "global",
+      "instanceId": "0069c7a9885cf944b14bb3f4732f23469fe4179a950299899eeb2e72dd8101bcbfe83a1ceee731c5de2291de5357d22759b7c38c2fea549dbf6b25eec1abe793013539c98d3b412a173d249674cd",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:39.629383391Z"
+  },
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948661995-89e0f1d5418ea.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b35000f3baadaa161ae",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "location": "us-east4",
+        "project_id": "dados-do-futuro",
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:41.998314Z",
+    "severity": "ERROR",
+    "labels": {
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "instanceId": "0069c7a98891c4294749438932b026a316827280b384cf4a06b805ed6d260e9a60d9f83795c14ececa751a9e7a3a16fa2e0b79afb441986fc96fcb1a4def72d6447299bab14da2e6ed040297b6e2",
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:42.004751039Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b36000666284dcd7b6f",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-east4",
+        "configuration_name": "dados-do-futuro",
+        "project_id": "dados-do-futuro",
+        "service_name": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:42.419368Z",
+    "severity": "ERROR",
+    "labels": {
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "gcb-trigger-region": "global",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "instanceId": "0069c7a98891c4294749438932b026a316827280b384cf4a06b805ed6d260e9a60d9f83795c14ececa751a9e7a3a16fa2e0b79afb441986fc96fcb1a4def72d6447299bab14da2e6ed040297b6e2"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:42.626170999Z"
+  },
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948664680-a4103324a286f.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b38000a6ea2233d1cc9",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "service_name": "dados-do-futuro",
+        "location": "us-east4",
+        "project_id": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:44.683682Z",
+    "severity": "ERROR",
+    "labels": {
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "instanceId": "0069c7a98853069e998ca5a0c166d2969af5264a5e23b073bceff1e4bc5b153a2a7059b0007912da6e4cc1a5f0155c86bd47e1a4b549e78a73bf00ace195a05eec00d497e3cd80b63b06659a0b9a",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "gcb-trigger-region": "global",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:45.003344978Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b390006c5b5cbe42aa0",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:45.443829Z",
+    "severity": "ERROR",
+    "labels": {
+      "instanceId": "0069c7a98853069e998ca5a0c166d2969af5264a5e23b073bceff1e4bc5b153a2a7059b0007912da6e4cc1a5f0155c86bd47e1a4b549e78a73bf00ace195a05eec00d497e3cd80b63b06659a0b9a",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:45.623722273Z"
+  },
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948667377-33b57f6eee15d.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b3b0005d2c2d26a623f",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "dados-do-futuro",
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4",
+        "revision_name": "dados-do-futuro-00002-cf7"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:47.381634Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-trigger-region": "global",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "instanceId": "0069c7a988b913f127b39eab21a6a7afb2b1fa26ba8ec3be445d6b468f376bf46b56ae8af48feb7cfa5bf6a460a1a78d1807bee511b7235f69dfedf2ed155e53e99721fece7b2aabe05ee0f5b64b",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:47.667446625Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b3c00002b959ea96b7d",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "project_id": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:48.011157Z",
+    "severity": "ERROR",
+    "labels": {
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "instanceId": "0069c7a988b913f127b39eab21a6a7afb2b1fa26ba8ec3be445d6b468f376bf46b56ae8af48feb7cfa5bf6a460a1a78d1807bee511b7235f69dfedf2ed155e53e99721fece7b2aabe05ee0f5b64b",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-region": "global",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:48.288876269Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 9,
+        "message": "Ready condition status changed to False for Revision dados-do-futuro-00002-cf7 with message: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dados-do-futuro&resource=cloud_run_revision/service_name/dados-do-futuro/revision_name/dados-do-futuro-00002-cf7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22dados-do-futuro%22%0Aresource.labels.revision_name%3D%22dados-do-futuro-00002-cf7%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+      },
+      "serviceName": "run.googleapis.com",
+      "methodName": "/Services.ReplaceService",
+      "resourceName": "namespaces/dados-do-futuro/revisions/dados-do-futuro-00002-cf7",
+      "response": {
+        "metadata": {
+          "name": "dados-do-futuro-00002-cf7",
+          "namespace": "423939980569",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/423939980569/revisions/dados-do-futuro-00002-cf7",
+          "uid": "5b20ffd2-ae8f-45fa-aede-e42c176cd54c",
+          "resourceVersion": "AAY4eoFr6+g",
+          "generation": 1,
+          "creationTimestamp": "2025-06-26T14:37:22.625986Z",
+          "labels": {
+            "client.knative.dev/nonce": "oeyjuxxwio",
+            "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+            "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+            "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+            "gcb-trigger-region": "global",
+            "managed-by": "gcp-cloud-build-deploy-cloud-run",
+            "serving.knative.dev/configuration": "dados-do-futuro",
+            "serving.knative.dev/configurationGeneration": "2",
+            "serving.knative.dev/service": "dados-do-futuro",
+            "serving.knative.dev/serviceUid": "7ad453ac-2430-4ea5-82ae-deb0bf5752a9",
+            "serving.knative.dev/route": "dados-do-futuro",
+            "run.googleapis.com/satisfiesPzs": "true",
+            "cloud.googleapis.com/location": "us-east4",
+            "run.googleapis.com/startupProbeType": "Default"
+          },
+          "annotations": {
+            "autoscaling.knative.dev/maxScale": "100",
+            "run.googleapis.com/client-name": "gcloud",
+            "run.googleapis.com/client-version": "528.0.0",
+            "serving.knative.dev/creator": "423939980569-compute@developer.gserviceaccount.com",
+            "run.googleapis.com/operation-id": "456693a1-6e38-409b-9c1e-d8e7d856a1eb",
+            "run.googleapis.com/startup-cpu-boost": "true"
+          },
+          "ownerReferences": [
+            {
+              "kind": "Configuration",
+              "name": "dados-do-futuro",
+              "uid": "84db0ec9-8fbd-4cd0-9b59-f2e33bc8dc77",
+              "apiVersion": "serving.knative.dev/v1",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Revision",
+        "spec": {
+          "containerConcurrency": 80,
+          "timeoutSeconds": 300,
+          "serviceAccountName": "423939980569-compute@developer.gserviceaccount.com",
+          "containers": [
+            {
+              "name": "placeholder-1",
+              "image": "us-east4-docker.pkg.dev/dados-do-futuro/cloud-run-source-deploy/dados-do-futuro/dados-do-futuro@sha256:1492cdce0a930b081742190ceb89c493f9f43ee456389d23e4fbb3b2f1c2a542",
+              "ports": [
+                {
+                  "name": "http1",
+                  "containerPort": 8080
+                }
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1000m",
+                  "memory": "512Mi"
+                }
+              },
+              "startupProbe": {
+                "timeoutSeconds": 240,
+                "periodSeconds": 240,
+                "failureThreshold": 1,
+                "tcpSocket": {
+                  "port": 8080
+                }
+              }
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dados-do-futuro&resource=cloud_run_revision/service_name/dados-do-futuro/revision_name/dados-do-futuro-00002-cf7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22dados-do-futuro%22%0Aresource.labels.revision_name%3D%22dados-do-futuro-00002-cf7%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-06-26T14:37:48.763112Z"
+            },
+            {
+              "type": "ContainerHealthy",
+              "status": "False",
+              "reason": "HealthCheckContainerError",
+              "message": "The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dados-do-futuro&resource=cloud_run_revision/service_name/dados-do-futuro/revision_name/dados-do-futuro-00002-cf7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22dados-do-futuro%22%0Aresource.labels.revision_name%3D%22dados-do-futuro-00002-cf7%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+              "lastTransitionTime": "2025-06-26T14:37:48.763112Z"
+            },
+            {
+              "type": "ContainerReady",
+              "status": "True",
+              "message": "Container image import completed in 3.54s.",
+              "lastTransitionTime": "2025-06-26T14:37:26.699888Z"
+            },
+            {
+              "type": "ResourcesAvailable",
+              "status": "True",
+              "message": "Provisioning imported containers completed in 5.99s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+              "lastTransitionTime": "2025-06-26T14:37:32.695198Z"
+            },
+            {
+              "type": "Retry",
+              "status": "True",
+              "reason": "ImmediateRetry",
+              "message": "System will retry after 0:00:00 from lastTransitionTime for attempt 0.",
+              "lastTransitionTime": "2025-06-26T14:37:32.695198Z",
+              "severity": "Info"
+            }
+          ],
+          "logUrl": "https://console.cloud.google.com/logs/viewer?project=dados-do-futuro&resource=cloud_run_revision/service_name/dados-do-futuro/revision_name/dados-do-futuro-00002-cf7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22dados-do-futuro%22%0Aresource.labels.revision_name%3D%22dados-do-futuro-00002-cf7%22",
+          "imageDigest": "us-east4-docker.pkg.dev/dados-do-futuro/cloud-run-source-deploy/dados-do-futuro/dados-do-futuro@sha256:1492cdce0a930b081742190ceb89c493f9f43ee456389d23e4fbb3b2f1c2a542",
+          "containerStatuses": [
+            {
+              "name": "placeholder-1",
+              "imageDigest": "us-east4-docker.pkg.dev/dados-do-futuro/cloud-run-source-deploy/dados-do-futuro/dados-do-futuro@sha256:1492cdce0a930b081742190ceb89c493f9f43ee456389d23e4fbb3b2f1c2a542"
+            }
+          ],
+          "desiredReplicas": 1
+        },
+        "@type": "type.googleapis.com/google.cloud.run.v1.Revision"
+      }
+    },
+    "insertId": "-rfdsbtd5acm",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "location": "us-east4",
+        "project_id": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:48.775715Z",
+    "severity": "ERROR",
+    "logName": "projects/dados-do-futuro/logs/cloudaudit.googleapis.com%2Fsystem_event",
+    "receiveTimestamp": "2025-06-26T14:37:49.736818386Z"
+  },
+  {
+    "textPayload": "Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@vitejs/plugin-react' imported from /workspace/node_modules/.vite-temp/vite.config.ts.timestamp-1750948671752-29a876dc7d2bc.mjs\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)\n    at packageResolve (node:internal/modules/esm/resolve:768:81)\n    at moduleResolve (node:internal/modules/esm/resolve:854:18)\n    at defaultResolve (node:internal/modules/esm/resolve:984:11)\n    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)",
+    "insertId": "685d5b3f000b886535eb48e7",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "location": "us-east4",
+        "configuration_name": "dados-do-futuro",
+        "project_id": "dados-do-futuro",
+        "revision_name": "dados-do-futuro-00002-cf7",
+        "service_name": "dados-do-futuro"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:51.755813Z",
+    "severity": "ERROR",
+    "labels": {
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "instanceId": "0069c7a988192d510e4c41c42b76c279547610b3d097733bfbeb390b0c76d0661a63edb4c8ecd2b4a1ebb5639e1443bfd338abbdcb264c62cc6c097d9a8b1b6d2099a871a44e4b0370ef094ab866"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2025-06-26T14:37:51.997215682Z",
+    "errorGroups": [
+      {
+        "id": "CK7m-peMsNLvFw"
+      }
+    ]
+  },
+  {
+    "textPayload": "Default STARTUP TCP probe failed 1 time consecutively for container \"placeholder-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "insertId": "685d5b400006742a72fd416e",
+    "resource": {
+      "type": "cloud_run_revision",
+      "labels": {
+        "project_id": "dados-do-futuro",
+        "service_name": "dados-do-futuro",
+        "configuration_name": "dados-do-futuro",
+        "location": "us-east4",
+        "revision_name": "dados-do-futuro-00002-cf7"
+      }
+    },
+    "timestamp": "2025-06-26T14:37:52.422954Z",
+    "severity": "ERROR",
+    "labels": {
+      "gcb-trigger-id": "ccd77c71-c605-4b68-9ba4-3eed8f02467b",
+      "gcb-build-id": "f7497fb3-8178-48e8-8578-1141dd2b6406",
+      "gcb-trigger-region": "global",
+      "commit-sha": "aeb74fcdbe1df924bc2c32e76c7c9f77c04dbc3d",
+      "managed-by": "gcp-cloud-build-deploy-cloud-run",
+      "instanceId": "0069c7a988192d510e4c41c42b76c279547610b3d097733bfbeb390b0c76d0661a63edb4c8ecd2b4a1ebb5639e1443bfd338abbdcb264c62cc6c097d9a8b1b6d2099a871a44e4b0370ef094ab866"
+    },
+    "logName": "projects/dados-do-futuro/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2025-06-26T14:37:52.616828284Z"
+  }
+]

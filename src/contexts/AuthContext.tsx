@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from 'react'
 
 interface AuthContextType {
@@ -12,7 +13,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   const login = (username: string, password: string): boolean => {
-    if (username === 'massa' && password === 'sohipren') {
+    const validUsername = import.meta.env.VITE_AUTH_USERNAME || 'massa'
+    const validPassword = import.meta.env.VITE_AUTH_PASSWORD || 'sohipren'
+    
+    if (username === validUsername && password === validPassword) {
       setIsAuthenticated(true)
       return true
     }
@@ -30,7 +34,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-export function useAuth() {
+export const useAuth = () => {
   const context = useContext(AuthContext)
   if (!context) {
     throw new Error('useAuth must be used within an AuthProvider')

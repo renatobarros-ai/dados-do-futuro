@@ -79,10 +79,6 @@ export default function Login() {
           </button>
         </form>
 
-        <div className="credentials-hint">
-          <strong>Credenciais de teste:</strong><br />
-          Login: <code>massa</code> | Senha: <code>sohipren</code>
-        </div>
       </div>
     </div>
   )
