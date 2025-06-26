@@ -1,0 +1,47 @@
+Funcionou! Mas precisamos fazer algumas alterações:
+
+## Geral
+
+* Trocar "1563 registros carregados do CSV" por "O IBM Granite Time Series TTM R2 previu 1563 registros com sucesso ".
+* Assim que o csv é carregado, os dados não aparecem em tela automaticamente.
+
+## Filtros
+
+### Estado
+
+* Não existe a opção "Todos os estados".
+* Deverão estar ordenados assim: "São Paulo", "Goiais", "Paraná", "Minas Gerais", "Exportação" e "Rio Grande do Sul".
+* Exclua os ícones.
+
+### Produtos
+
+* Alterar o nome "Produtos" para Produto.
+* Cada produto só deverá aparecer na lista 1 vez.
+* Deverão estar ordenados do com mais vendas para o com menos, somando todos os meses.
+* Alterar "Buscar produtos" para "Buscar produto"
+* A busca também funciona se o usuário inserir o código, inserindo ou não os "pontos".
+* Após o produto ser excolhido  a parte que mostra os produtos é recolhida.
+
+### Período
+
+* Trocar os "boxes" por por dois campos (como "Estado" e "Produto"): um para "De" e outro "Até" (ou outros nomes melhores).
+* O campo "Até", não precisa ser selecionado. Caso isso aconteça só é mostrado 1 mês (ter algo no campo informando isso).
+* Os 12 meses devem estar disponíveis.
+
+### Adição
+
+* Incluir um botão "Apresentar Dados" (ou outro nome melhor). So mostra os dados em tela após apertar.
+
+### Regras
+
+* A sequencia de escolha é: Estado > Produto > Período > Botão
+* Só é possível escolher o próximo, após o anterior, inclusive o botão
+
+## Números consolidados
+
+* Antes do usuário escolher continua sendo mostrado o "global"
+
+## Exportação
+
+* Ambos botões devem ter mesma cor e efeitos.
+
