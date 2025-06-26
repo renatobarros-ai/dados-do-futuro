@@ -6,9 +6,7 @@ import {
   Zap, 
   BarChart3, 
   Eye, 
-  Activity,
-  Medal,
-  AlertTriangle
+  Activity
 } from 'lucide-react'
 
 interface InsightItem {

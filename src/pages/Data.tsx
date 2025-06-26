@@ -21,7 +21,6 @@ interface ProdutoComVendas {
 // Função de parser CSV
 const parseCSV = (csvText: string): SalesData[] => {
   const lines = csvText.trim().split('\n')
-  const header = lines[0].split(',')
   
   return lines.slice(1).map(line => {
     const values = line.split(',')

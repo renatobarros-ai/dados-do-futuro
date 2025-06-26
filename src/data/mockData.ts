@@ -1,3 +1,12 @@
+export interface SalesData {
+  mes: string
+  uf: string
+  produto_codigo: string
+  produto_descricao: string
+  vendas: number
+  faturamento: number
+}
+
 export const salesData: SalesData[] = [
   { mes: "2025-07-01", uf: "SP", produto_codigo: "5.0203.0540801.0", produto_descricao: "BOD 5,5 C11.C.C3.L", vendas: 6, faturamento: 3120.0 },
   { mes: "2025-08-01", uf: "SP", produto_codigo: "5.0206.0543205.0", produto_descricao: "BOD 11 C11.C.C3.L", vendas: 13, faturamento: 6630.0 },
