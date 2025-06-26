@@ -1,0 +1,27 @@
+❯ npm run dev
+
+> dados-do-futuro@0.0.0 dev
+> vite
+
+
+  VITE v7.0.0  ready in 143 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |
+5  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |
+7  |  @layer base {
+01:39:34 [vite] (client) ✨ new dependencies optimized: react-router-dom
+01:39:34 [vite] (client) ✨ optimized dependencies changed. reloading
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3  |  @tailwind utilities;
+4  |
+5  |  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6  |
+7  |  @layer base {
